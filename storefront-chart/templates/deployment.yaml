@@ -32,6 +32,10 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          command: ["/bin/bash","-c"]
+          args:
+          - echo 'starting script';
+            npm start -- --host 0.0.0.0;
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http

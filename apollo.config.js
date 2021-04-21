@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 
 const config = {
   ...dotenv.config().parsed,
-  ...dotenv.config({ path: ".env.local" }).parsed,
+  ...dotenv.config({ path: ".env" }).parsed,
 };
 
 module.exports = {
