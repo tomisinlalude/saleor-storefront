@@ -188,7 +188,7 @@
   },
   "scripts": {
     "test": "cross-env LANGUAGE_LOCALE=en-US jest --runInBand --config .jest/config.json",
-    "start": "next dev -p 3000",
+    "start": "next dev -h 0.0.0.0 -p 3000",
     "start:optimize": "cross-env OPTIMIZE=true next dev -p 3000",
     "start:worker": "cross-env SERVICE_WORKER=true npm run start",
     "build": "next build",

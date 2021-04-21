@@ -35,7 +35,7 @@ spec:
           command: ["/bin/bash","-c"]
           args:
           - echo 'starting script';
-            npm start -- --host 0.0.0.0;
+            npm start;
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
